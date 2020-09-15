@@ -6,7 +6,7 @@ Resources:
     Properties:
       ImageId: ami-0c94855ba95c71c99
       InstanceType: t2.micro
-      KeyName: key_key
+      KeyName: KEY
       SecurityGroups:
         - HTTPandSSH
       Tags:
