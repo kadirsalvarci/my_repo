@@ -34,19 +34,18 @@ Resources:
       KeyName: !Ref KeyPairName
       SecurityGroupIds:
         - !Ref MySecGroup
-      Tags:
+       Tags:
         - Key: Name
-          Value: !Sub Web Server
-      UserData: 
-        Fn::Base64:
-          !Sub |
+          Value: !Sub Web Server of ${AWS::StackName} Stack 
+      UserData: !Base64 |
           #! /bin/bash
           yum update -y
           yum install python3 -y
           pip3 install flask
+          cd /home/ec2-user
           wget https://raw.githubusercontent.com/kadirsalvarci/my_repo/master/aws/projects/serdarhocaromancozum/app.py
           wget -P templates https://raw.githubusercontent.com/kadirsalvarci/my_repo/master/aws/projects/serdarhocaromancozum/templates/index.html
-          wget -P Templates https://raw.githubusercontent.com/kadirsalvarci/my_repo/master/aws/projects/serdarhocaromancozum/templates/result.html
+          wget -P templates https://raw.githubusercontent.com/kadirsalvarci/my_repo/master/aws/projects/serdarhocaromancozum/templates/result.html
           cd ..
           python3 app.py
 
