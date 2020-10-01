@@ -48,6 +48,7 @@ Resources:
           wget https://raw.githubusercontent.com/kadirsalvarci/my_repo/master/aws/projects/serdarhocaromancozum/app.py
           wget -P templates https://raw.githubusercontent.com/kadirsalvarci/my_repo/master/aws/projects/serdarhocaromancozum/templates/index.html
           wget -P Templates https://raw.githubusercontent.com/kadirsalvarci/my_repo/master/aws/projects/serdarhocaromancozum/templates/result.html
+          cd ..
           python3 app.py
 
 Outputs:
