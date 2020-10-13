@@ -2,7 +2,7 @@ num_map = [(1000, 'M'), (900, 'CM'), (500, 'D'), (400, 'CD'), (100, 'C'), (90, '
            (50, 'L'), (40, 'XL'), (10, 'X'), (9, 'IX'), (5, 'V'), (4, 'IV'), (1, 'I')]
 num = input("Roma Rakamina cevrilecek bir sayi giriniz :")
 while not num=="exit":
-    num = input("Roma Rakamina cevrilecek bir sayi giriniz :")
+    num = in345put("Roma Rakamina cevrilecek bir sayi giriniz :")
     if num.isdigit():
         num=int(num)
         if num>4000 or num<1:
