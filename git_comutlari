@@ -10,4 +10,4 @@ you can run cd /Users/keepnode
 ls -a
 you will find the .git folder.
 runrm -r -f .git
-you will fix that.
+you will fix that.kkk
