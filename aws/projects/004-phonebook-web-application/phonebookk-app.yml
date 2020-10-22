@@ -134,7 +134,7 @@ Resources:
       DBInstanceClass: db.t2.micro #Required
       EngineVersion: 8.0.19
       MasterUsername: admin
-      MasterUserPassword: clarusway_1
+      MasterUserPassword: clarusway-1
         Type: "AWS::Cassandra::Keyspace"
         Properties:
           KeyspaceName: String
