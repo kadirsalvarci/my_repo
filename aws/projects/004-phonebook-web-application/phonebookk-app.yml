@@ -56,8 +56,8 @@ Resources:
                 pip3 install flask
                 pip3 install flask_mysql
                 echo "${MyDBURI}" > /home/ec2-user/dbserver.endpoint
-                TOKEN="e46ffd29429bc88b77d600fbbcc9aa1d4c29a200"
-                FOLDER="https://$TOKEN@raw.githubusercontent.com/kadirsalvarci/my_repo/tree/master/"
+                TOKEN="428f854a55c4e593585a11d4351359c91097508c"
+                FOLDER="https://$TOKEN@raw.githubusercontent.com/kadirsalvarci/my_repo/master/aws/projects/004-phonebook-web-application/"
                 curl -s --create-dirs -o "/home/ec2-user/templates/index.html" -L "$FOLDER"templates/index.html
                 curl -s --create-dirs -o "/home/ec2-user/templates/add-update.html" -L "$FOLDER"templates/add-update.html
                 curl -s --create-dirs -o "/home/ec2-user/templates/delete.html" -L "$FOLDER"templates/delete.html
@@ -134,7 +134,11 @@ Resources:
       DBInstanceClass: db.t2.micro #Required
       EngineVersion: 8.0.19
       MasterUsername: admin
-      MasterUserPassword: Serdar_1
+      MasterUserPassword: clarusway_1
+        Type: "AWS::Cassandra::Keyspace"
+        Properties:
+          KeyspaceName: String
+      
       MultiAZ: false
       Port: 3306
       PubliclyAccessible: true
