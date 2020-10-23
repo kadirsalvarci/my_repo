@@ -58,15 +58,17 @@ Resources:
                 yum update -y
                 yum install python3 -y
                 pip3 install flask
-                pip3 install flask_mysql
+                pip3 install flask-mysql
+                pip3 install flask-Ext
+                wget https://raw.githubusercontent.com/kadirsalvarci/my_repo/master/aws/projects/004-phonebook-web-application/phonebook-app.py
                 echo "${MyDBURI}" > /home/ec2-user/dbserver.endpoint
-                TOKEN="fa1fdc6f49894f4124d4667c3e8fb4a4b7662e61"
-                FOLDER="https://$TOKEN@raw.githubusercontent.com/kadirsalvarci/my_repo/master/aws/projects/004-phonebook-web-application/"
-                curl -s --create-dirs -o "/home/ec2-user/templates/index.html" -L "$FOLDER"templates/index.html
-                curl -s --create-dirs -o "/home/ec2-user/templates/add-update.html" -L "$FOLDER"templates/add-update.html
-                curl -s --create-dirs -o "/home/ec2-user/templates/delete.html" -L "$FOLDER"templates/delete.html
-                curl -s --create-dirs -o "/home/ec2-user/app.py" -L "$FOLDER"phonebook-app.py
-                python3 /home/ec2-user/app.py
+                mkdir templates
+                cd templates
+                wget https://raw.githubusercontent.com/kadirsalvarci/my_repo/master/aws/projects/004-phonebook-web-application/templates/index.html
+                wget https://raw.githubusercontent.com/kadirsalvarci/my_repo/master/aws/projects/004-phonebook-web-application/templates/add-update.html
+                wget https://raw.githubusercontent.com/kadirsalvarci/my_repo/master/aws/projects/004-phonebook-web-application/templates/delete.html
+                cd ..
+                python3 phonebook-app.py
               - MyDBURI: !GetAtt MyDatabaseServer.Endpoint.Address
 
   WebServerTG:
