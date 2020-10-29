@@ -1,0 +1,14 @@
+-domain name or: editawscloud.com
+-website full domain : kitchen.editawscloud.com
+
+- s3
+ - bucket
+ - public policy 
+
+-certificate
+
+-cloudfront
+ -cloudfront distribution
+
+-route 53
+ -record set for website
