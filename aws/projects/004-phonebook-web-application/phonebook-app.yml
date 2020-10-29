@@ -59,7 +59,6 @@ Resources:
                 yum install python3 -y
                 pip3 install flask
                 pip3 install flask-mysql
-                pip3 install flask-Ext
                 wget https://raw.githubusercontent.com/kadirsalvarci/my_repo/master/aws/projects/004-phonebook-web-application/phonebook-app.py
                 echo "${MyDBURI}" > /home/ec2-user/dbserver.endpoint
                 mkdir templates
