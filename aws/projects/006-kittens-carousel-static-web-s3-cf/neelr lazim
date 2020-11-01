@@ -12,3 +12,29 @@
 
 -route 53
  -record set for website
+
+ s3 atma
+  5913  aws s3 ls
+ 5916  aws s3 sync . s3://kittens.sayici.co.uk
+ 5917  aws s3 ls s3://kittens.sayici.co.u
+
+
+
+
+
+
+kittensve domain name diyor
+
+abi birde bir komut daha ca r
+
+s3 sync . s3//bucket name  <---------------- "ama bunu o dosya yolunun icindeyken yapicaksin ....
+
+aws s3 sync .  s3://kittens.sayici.co.uk  <------------ dosya yolunda olman lazim yani static-web icinde 
+
+
+
+
+
+
+
+
